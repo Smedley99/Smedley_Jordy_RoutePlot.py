@@ -11,13 +11,13 @@ def plot_route(route):
     grid = [[' ' for _ in range(12)] for _ in range(12)] 
     x, y = 0, 0 
     for direction in route: 
-        if direction == 'UP': 
+        if direction == 'N': 
             y -= 1 
-        elif direction == 'DOWN': 
+        elif direction == 'S': 
             y += 1 
-        elif direction == 'LEFT': 
+        elif direction == 'W': 
             x -= 1 
-        elif direction == 'RIGHT': 
+        elif direction == 'E': 
             x += 1 
         if x < 0 or x >= 12 or y < 0 or y >= 12: 
             print("Route is outside the grid!") 
@@ -33,13 +33,13 @@ def print_coordinates(route):
     coordinates = [] 
     for direction in route: 
         coordinates.append((x, y)) 
-        if direction == 'UP': 
+        if direction == 'N': 
             y -= 1 
-        elif direction == 'DOWN': 
+        elif direction == 'S': 
             y += 1 
-        elif direction == 'LEFT': 
+        elif direction == 'W': 
             x -= 1 
-        elif direction == 'RIGHT': 
+        elif direction == 'E': 
             x += 1 
     print("Coordinates of the route:", coordinates) 
 
